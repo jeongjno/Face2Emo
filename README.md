@@ -43,9 +43,9 @@ Color Synthesis
 - Perceptual hashing → 중복 이미지 제거
 - MTCNN face confidence < 0.9 제거
 
-# 4. Fianl Model
+# 4. Final Model
 
-## 1. ModelArchitecture
+## 1. Model Architecture
 - Compound Scaling Model (EfficientNet-B2, 9.9M parameters)
 ## 2. Transfer Learning
 - AffectNet pre-trained
