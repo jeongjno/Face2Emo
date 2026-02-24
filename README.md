@@ -13,19 +13,13 @@ Face2Emo는 얼굴 이미지로부터 감정을 인식하고, 개인 고유 피�
 # 2. Architecture
 
 ## Overall Pipeline
-Input Image
-   ↓
-Face Detection
-   ↓
-EfficientNet-B2 (FER)
-   ↓
-Emotion Probability (7-class softmax)
-   ↓
-Condition Score (Heuristic Mapping)
-   ↓
-Personal Color Extraction (CIE LAB color space)
-   ↓
-Color Synthesis
+1. Input Image
+2. Face Detection
+3. EfficientNet-B2 (FER)
+4. Emotion Probability (7-class softmax)
+5. Condition Score (Heuristic Mapping)
+6. Personal Color Extraction (CIE LAB color space)
+7. Color Synthesis
 
 ## Key Components
 - Backbone: EfficientNet-B2
@@ -34,7 +28,16 @@ Color Synthesis
 - Color Space: CIE LAB
 - Clustering Algorithm: K-Means
 
-# 3. Dataset
+# 3. Repository Structure
+📦 Face2Emo
+┣ 📂 Models
+┣ 📂 datasets
+┣ 📂 html
+┣ 📂 images
+┣ 📜 README.md
+┗ 📜 requirements.txt
+
+# 4. Dataset
 - FER2013
 - RAF-DB
 - etc
@@ -43,19 +46,21 @@ Color Synthesis
 - Perceptual hashing → 중복 이미지 제거
 - MTCNN face confidence < 0.9 제거
 
-# 4. Final Model
+# 5. Installation
+1. ...
 
-## 1. Model Architecture
+# 6. Final Model
+
+## Model Architecture
 - Compound Scaling Model (EfficientNet-B2, 9.9M parameters)
-## 2. Transfer Learning
+## Transfer Learning
 - AffectNet pre-trained
 - 2-phase training
-## 3. Optimization & Regularization
+## Optimization & Regularization
 - Weighted Cross Entropy
 - Label Smoothing
 
-# 5. Color Matching
-# 6. Results
-# 7. Demo
-# 8. Installation
-# 9. Folder Structure
+# 7. Color Matching
+# 8. Results
+# 9. Demo
+
